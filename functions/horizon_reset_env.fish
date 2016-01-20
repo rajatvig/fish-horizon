@@ -1,5 +1,8 @@
 function horizon_reset_env
-  rm -rf .tox .venv node_modules
+  mv openstack_dashboard/local/local_settings.py /tmp
+  git clean -dfx
+  cd ~
+  cd -
   npm install
   rm -rf .tox
   pip install tox
