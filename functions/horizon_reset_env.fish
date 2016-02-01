@@ -3,8 +3,8 @@ function horizon_reset_env
   mv .envrc /tmp
   git clean -dfx
   mv /tmp/.envrc .
-  mv /tmp/local_settings.py .
-  cd ~
+  mv /tmp/local_settings.py openstack_dashboard/local/local_settings.py
+  cd /tmp
   cd -
   npm install
   rm -rf .tox
